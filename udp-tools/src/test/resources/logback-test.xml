@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<configuration debug="true">
+  <!-- Sends logs to logback-beagle (not working for Eclipse Kepler, see http://jira.qos.ch/browse/CONSPLUG-44) 
+  <consolePlugin />
+  -->
+
+  <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <logger name="nl.bransom.udptools" level="DEBUG" additivity="false">
+    <appender-ref ref="Console" />
+  </logger>
+
+  <root level="ERROR">
+    <appender-ref ref="Console" />
+  </root>
+</configuration>

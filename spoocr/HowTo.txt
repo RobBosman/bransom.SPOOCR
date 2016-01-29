@@ -1,0 +1,15 @@
+Shutdown from Linux:
+	#> net rpc shutdown -I 10.0.0.93 -U ShutdownUser%Shutdown!
+
+Shutdown from Windows8.1:
+	#> net use \\BosmanNAS\IPC$ Shutdown! /USER:ShutdownUser
+	#> shutdown /s /m \\BosmanNAS
+
+Windows7:
+	1. Gebruikersaccount "ShutdownUser" aanmaken
+	2. Toegang geven tot remote shutdown (secpol.msc)
+		Start => Configuratiescherm => Systeembeheer => Lokaal beveiligingsbeleid => Lokaal beleid => Toewijzing van gebruikersrechten => Afsluiten vanaf een extern systeem => voeg "ShutdownUser" toe
+	3. RemoteRegistry service starten
+		Start => Configuratiescherm => Systeembeheer => Services => Remote Registry => Algemeen => Opstarttype: Automatisch => Toepassen => Starten
+	4. Firewall openen
+		Open Configuratiescherm "Windows Firewall" => Geavanceerde instellingen => Regels voor binnenkomende verbindingen => Exterm beheer (RPC) [privé] => inschakelen

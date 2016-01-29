@@ -1,0 +1,150 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/ipAddress"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/editTextIPAddress1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonPing1"
+        android:layout_alignBottom="@+id/buttonPing1"
+        android:layout_alignLeft="@+id/TextView01"
+        android:ems="10"
+        android:hint="@string/macAddress"
+        android:text="10.0.0.37" />
+
+    <Button
+        android:id="@+id/buttonPing1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/TextView01"
+        android:onClick="onClickPing1"
+        android:text="@string/buttonPing" />
+
+    <EditText
+        android:id="@+id/editTextIPAddress2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editTextIPAddress1"
+        android:layout_below="@+id/buttonPing1"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="@string/macAddress"
+        android:text="10.0.0.93" />
+
+    <Button
+        android:id="@+id/buttonPing2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editTextIPAddress2"
+        android:layout_alignBottom="@+id/editTextIPAddress2"
+        android:layout_alignLeft="@+id/buttonPing1"
+        android:onClick="onClickPing2"
+        android:text="@string/buttonPing" />
+
+    <EditText
+        android:id="@+id/editTextIPAddress3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editTextIPAddress2"
+        android:layout_below="@+id/buttonPing2"
+        android:layout_marginTop="17dp"
+        android:ems="10"
+        android:hint="@string/macAddress"
+        android:text="10.0.0.100" />
+
+    <Button
+        android:id="@+id/buttonPing3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editTextIPAddress3"
+        android:layout_alignBottom="@+id/editTextIPAddress3"
+        android:layout_alignLeft="@+id/buttonPing2"
+        android:onClick="onClickPing3"
+        android:text="@string/buttonPing" />
+
+    <TextView
+        android:id="@+id/textViewMACAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editTextMACAddress1"
+        android:layout_marginBottom="39dp"
+        android:text="@string/macAddress"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/editTextMACAddress1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonWake2"
+        android:ems="10"
+        android:hint="@string/macAddress"
+        android:text="0C:8B:FD:87:37:2D" />
+
+    <Button
+        android:id="@+id/buttonWake1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editTextMACAddress1"
+        android:layout_alignParentRight="true"
+        android:onClick="onClickWake1"
+        android:text="@string/wake" />
+
+    <EditText
+        android:id="@+id/editTextMACAddress2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonWake3"
+        android:layout_alignLeft="@+id/textViewMACAddress"
+        android:ems="10"
+        android:hint="@string/macAddress"
+        android:text="00:13:8F:AD:C0:68" >
+    </EditText>
+
+    <Button
+        android:id="@+id/buttonWake2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editTextMACAddress2"
+        android:layout_alignParentRight="true"
+        android:onClick="onClickWake2"
+        android:text="@string/wake" />
+
+    <EditText
+        android:id="@+id/editTextMACAddress3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editTextMACAddress2"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:ems="10"
+        android:hint="@string/macAddress"
+        android:text="6C:FD:B9:00:1C:FF" />
+
+    <Button
+        android:id="@+id/buttonWake3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editTextMACAddress3"
+        android:layout_alignBottom="@+id/editTextMACAddress3"
+        android:layout_alignParentRight="true"
+        android:onClick="onClickWake3"
+        android:text="@string/wake" />
+
+</RelativeLayout>
